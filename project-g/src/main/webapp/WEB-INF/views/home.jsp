@@ -3,12 +3,30 @@
 <html>
 <head>
 	<title>Home</title>
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/backbone-min.js"></script>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
+	<script type="text/template" id="testTemplate">
+		<div>
+			<button id="testButton" name="testButton">TEST</button>
+		</div>
+	</script>
+	
+	<script type="javascript">
+		app.test = backbone.view.extends({
+			tagName : 'li',
+			template : _.template($(#testTemplate).html()),
+			initialize : function() {
+				
+			},
+			render : function(){
+				this.$el.html(this.template);
+				return this;
+			}
+		});
+	</script>
 
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
