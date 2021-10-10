@@ -19,15 +19,15 @@ var scraping = {
 	},
 	printScrap : {
 		printDaumScraping : function(){
-			var result = daumScrapingStart();
+			var result = scraping.daumScrapingStart();
 			print(result.toString());
 		},
 		naverScrapingStart : function(){
-			var result = naverScrapingStart();
+			var result = scraping.naverScrapingStart();
 			print(result.toString());
 		},
 		cgvScrapingStart : function(){
-			var result = cgvScrapingStart();
+			var result = scraping.cgvScrapingStart();
 			print(result.toString());
 		}
 	},

@@ -4,11 +4,11 @@
 <head>
 	<title>Home</title>
 	
-	<script type="text/javascript" src="/resources/jquery-3.5.1.js"></script>
-	<script type="text/javascript" src="/resources/underscore-min.js"></script>
-	<script type="text/javascript" src="/resources/backbone-min.js"></script>
-	<script type="text/javascript" src="/resources/scraping.js"></script>
-	<script type="text/javascript" src="/resources/ajax.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/underscore-min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/backbone-min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/scraping.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/ajax.js"></script>
 </head>
 <body>
 	<div id="testResult">
