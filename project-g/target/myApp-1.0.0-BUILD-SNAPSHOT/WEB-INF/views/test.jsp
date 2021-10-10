@@ -8,5 +8,17 @@
 </head>
 <body>
  <h1>TEST</h1>
+
+ 
+ <script type="text/javascript">
+	var result = confirm("새 창을 여시겠습니까???");
+
+	if(result){
+		alert("true");
+		
+	}else{
+		alert("false");
+	}
+ </script>
 </body>
 </html>
