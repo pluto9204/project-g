@@ -3,29 +3,46 @@
 <html>
 <head>
 	<title>Home</title>
-	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
-	<script type="text/javascript" src="js/underscore-min.js"></script>
-	<script type="text/javascript" src="js/backbone-min.js"></script>
+	
+	<script type="text/javascript" src="/resources/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="/resources/underscore-min.js"></script>
+	<script type="text/javascript" src="/resources/backbone-min.js"></script>
 </head>
 <body>
+	<div id="testResult">
+	</div>
 	<script type="text/template" id="testTemplate">
 		<div>
-			<button id="testButton" name="testButton">TEST</button>
+			<h1>HelloWorld</h1>
+			<input type="button" id="callTemplateButton" name="callTemplateButton"></input>
 		</div>
 	</script>
 	
-	<script type="javascript">
-		app.test = backbone.view.extends({
-			tagName : 'li',
-			template : _.template($(#testTemplate).html()),
+	<script type="text/javascript">
+		
+		var AppTest = Backbone.View.extend({
+			el : "<div id="testApp"></div>",
+			template : _.template($("#testTemplate").html()),
+			events : {
+				"click #callTemplateButton" : "ButtonEvent"
+			},
 			initialize : function() {
-				
 			},
 			render : function(){
-				this.$el.html(this.template);
-				return this;
+                this.$el.html(this.template);
+
+                return this;
+			},
+			ButtonEvent : function(event){
+				console.log("success!!");
 			}
 		});
+		
+		var app = new AppTest();
+		
+		app.render();
+
+
 	</script>
 
 </body>
