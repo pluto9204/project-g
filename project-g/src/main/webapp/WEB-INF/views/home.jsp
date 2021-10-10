@@ -7,6 +7,8 @@
 	<script type="text/javascript" src="/resources/jquery-3.5.1.js"></script>
 	<script type="text/javascript" src="/resources/underscore-min.js"></script>
 	<script type="text/javascript" src="/resources/backbone-min.js"></script>
+	<script type="text/javascript" src="/resources/scraping.js"></script>
+	<script type="text/javascript" src="/resources/ajax.js"></script>
 </head>
 <body>
 	<div id="testResult">
@@ -19,8 +21,9 @@
 	</script>
 	
 	<script type="text/javascript">
+		scraping.printScrap.printDaumScraping();
 		
-		var AppTest = Backbone.View.extend({
+/* 		var AppTest = Backbone.View.extend({
 			el : "<div id="testApp"></div>",
 			template : _.template($("#testTemplate").html()),
 			events : {
@@ -40,7 +43,7 @@
 		
 		var app = new AppTest();
 		
-		app.render();
+		app.render(); */
 
 
 	</script>
