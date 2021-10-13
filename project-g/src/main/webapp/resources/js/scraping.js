@@ -6,29 +6,41 @@
 var daumMovieUrl = "https://movie.daum.net/premovie/release";
 var naverMovieUrl = "https://movie.naver.com/movie/running/current.nhn";
 var cgvMovieUrl = "http://www.cgv.co.kr/movies/";
-
 var scraping = {
+	axiosLauncher : function(url){
+		axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+		axios({
+			method : "GET",
+			withCredentials : true,
+			url : url,
+			data : {},
+		}).then(function(result){
+			return result;
+		}).catch(function(error){
+			alert(error);
+		});
+	},
 	daumScrapingStart : function(){
-		return common.ajax.ajaxStart(daumMovieUrl);
+		return scraping.axiosLauncher(daumMovieUrl);
 	},
 	naverScrapingStart : function(){
-		return common.ajax.ajaxStart(naverMovieUrl);
+		return scraping.axiosLauncher(naverMovieUrl);
 	},
 	cgvScrapingStart : function(){
-		return common.ajax.ajaxStart(cgvMovieUrl);
+		return scraping.axiosLauncher(cgvMovieUrl);
 	},
 	printScrap : {
 		printDaumScraping : function(){
 			var result = scraping.daumScrapingStart();
-			print(result.toString());
+			print(result);
 		},
 		naverScrapingStart : function(){
 			var result = scraping.naverScrapingStart();
-			print(result.toString());
+			print(result);
 		},
 		cgvScrapingStart : function(){
 			var result = scraping.cgvScrapingStart();
-			print(result.toString());
+			print(result);
 		}
 	},
 }

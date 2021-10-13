@@ -6,7 +6,7 @@
 var common = {
 	ajaxStart : function(targetUrl) {
 		$.ajax({
-			method: "POST",
+			method: "GET",
 			url: targetUrl,
 			success : function(result){
 				return result;
@@ -19,7 +19,7 @@ var common = {
 	
 	ajaxStart : function(targetUrl, parameters) {
 		$.ajax({
-			method: "POST",
+			method: "GET",
 			url: targetUrl,
 			data : parameters,
 			success : function(result){
@@ -33,10 +33,10 @@ var common = {
 	
 	ajax : {
 		ajaxStart : function(targetUrl) {
-			return ajaxStart(targetUrl);
+			return common.ajaxStart(targetUrl);
 		},
 		setParamsAjax : function(targetUrl, params){
-			return ajaxStart(targetUrl, params);
+			return common.ajaxStart(targetUrl, params);
 		},
 	},
 }
