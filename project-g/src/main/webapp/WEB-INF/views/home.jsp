@@ -17,13 +17,17 @@
 	<button id="loginBtn" color="red">로그인</button>
 	<button id="regUserBtn" color="green">회원가입</button>
 	<script type="text/javascript">
+		var Cpath = "<%=request.getContextPath() %>";
 		$("#loginBtn").on("click", function(){
-			common.ajax.ajaxStart("loginUser");
+			var url = Cpath + "/loginUser";
+			location.replace(url);
+			//common.ajax.ajaxStart("loginUser");
 		});
 		
-		$("#regUserBtn".on("click", function(){
-			common.ajax.ajaxStart("registUser");
-			
+		$("#regUserBtn").on("click", function(){
+			var url = Cpath + "/registUser";
+			location.replace(url);
+			//common.ajax.ajaxStart("registUser");
 		});
 		
 		

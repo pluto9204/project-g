@@ -45,4 +45,22 @@ public class HomeController {
 		logger.info("Welcome home!");
 		return "home";
 	}
+	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@RequestMapping(value = "/loginUser", method = RequestMethod.GET)
+	public String loginUser() {
+		logger.info("Login User!");
+		return "loginUser";
+	}
+	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@RequestMapping(value = "/registUser", method = RequestMethod.GET)
+	public String registUser() {
+		logger.info("Regist User!");
+		return "registUser";
+	}
 }

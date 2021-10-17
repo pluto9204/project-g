@@ -9,7 +9,7 @@ var common = {
 			method: "GET",
 			url: targetUrl,
 			success : function(result){
-				return result;
+				console.log(result);
 			},
 			error : function(result){
 				alert("ERROR!! => " + result.toString());
@@ -23,7 +23,7 @@ var common = {
 			url: targetUrl,
 			data : parameters,
 			success : function(result){
-				return result;
+				console.log(result);
 			},
 			error : function(result){
 				alert("ERROR!! => " + result.toString());
